@@ -54,26 +54,26 @@ fetch(sheetUrl)
   })
   .then(function(json) {
     console.log(json);
-    appendPersons(json.feed.entry);
+    appendEvents(json.feed.entry);
   });
 
 /*
 Appends json data to the DOM
 */
-function appendPersons(persons) {
-  console.log(persons);
+function appendEvents(events) {
+  console.log(events);
   let htmlTemplate = "";
-  for (let person of persons) {
+  for (let event of events) {
     htmlTemplate += `
         <article class="news">
           <section>
-          <h3>${person['gsx$something']['$t']}</h3>
-          <p>${person['gsx$navn']['$t']}</p>
+          <h3>${event['gsx$something']['$t']}</h3>
+          <p>${event['gsx$navn']['$t']}</p>
           </section>
           <section>
-          <p>Tid: <strong>${person['gsx$tid']['$t']}</strong></p>
-          <p>Dato: <strong>${person['gsx$dato']['$t']}</strong></p>
-          <p>Sted: <strong>${person['gsx$sted']['$t']}</strong></p>
+          <p>Tid: <strong>${event['gsx$tid']['$t']}</strong></p>
+          <p>Dato: <strong>${event['gsx$dato']['$t']}</strong></p>
+          <p>Sted: <strong>${event['gsx$sted']['$t']}</strong></p>
           <section>
         </article>
       `;
