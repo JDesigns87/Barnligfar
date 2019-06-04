@@ -119,12 +119,16 @@ h2 {
   padding-right: 100px;
 }
 
+.container h4 {
+  color: #989898;
+  text-align: left;
+}
+
 .text h3 {
   padding-top: 50px;
   color: #989898;
   text-align: left;
   margin-bottom: 0px;
-
 }
 
 .text p {
